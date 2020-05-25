@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>//imp when site is big (trying to factor out some of js code from html)
+            //1st statement ma when content of the dom is loaded function should run not right away(call back function)
+
+            document.addEventListener('DOMContentLoaded',function()){
+
+                document.querySelector('button').onclick=count;
+            }
+
+            let counter = 0;
+
+            function count() {
+                counter++;
+                document.querySelector('#counter').innerHTML = counter;
+
+                if (counter % 10 === 0) {
+                    alert(`Counter is at ${counter}!`);
+                }
+            }
+
+        </script>
+        <title>My Website</title>
+    </head>
+    <body>
+        <h1 id="counter">0</h1>
+        <button>Click Here!</button>
+    </body>
+</html>
+

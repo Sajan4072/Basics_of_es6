@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script type="text/javascript">//queryselectorall queries all class with color change
+        //data-color is example of data attribute to associate additional information about html elemnt that is not displayed 
+
+        //foreach one of those button we run a funciton which takes it hello heading and changes it data color attribute
+    </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // Have each button change the color of the heading
+                document.querySelectorAll('.color-change').forEach(button => {
+                    button.onclick = () => {
+                        document.querySelector('#hello').style.color = button.dataset.color;
+                    };
+                });
+
+            });
+        </script>
+        <title>My Website</title>
+    </head>
+    <body>
+        <h1 id="hello">Hello!</h1>
+        <button class="color-change" data-color="red">Red</button>
+        <button class="color-change" data-color="blue">Blue</button>
+        <button class="color-change" data-color="green">Green</button>
+    </body>
+</html>

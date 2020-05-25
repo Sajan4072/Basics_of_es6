@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>//setInterval is a built in function it calls count in ther inteval of 1000milisec
+
+            document.addEventListener('DOMContentLoaded', () => {
+                setInterval(count, 1000);
+            });
+
+            let counter = 0;
+
+            function count() {
+                counter++;
+                document.querySelector('#counter').innerHTML = counter;
+            }
+
+        </script>
+        <title>My Website</title>
+    </head>
+    <body>
+        <h1 id="counter">0</h1>
+    </body>
+</html>
